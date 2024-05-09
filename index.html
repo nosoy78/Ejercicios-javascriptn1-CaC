@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Práctica - JavaScript Unidad 1</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2>Actividad Práctica Adicional - JavaScript Unidad 1</h2>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <p>1. Escribe un programa de una sola línea que haga que aparezca en la pantalla un
+                    alert que diga “Hello World”. </p>
+                <button class="btn btn-primary" onclick="ejercicio1()">Ejercicio 1</button>
+
+                <p>2. Escribe un programa de una sola línea que escriba en la pantalla un texto que
+                    diga “Hello World” (document.write). </p>
+                <button class="btn btn-primary" onclick="ejercicio2()">Ejercicio 2</button>
+
+                <p>3. Escribe un programa de una sola línea que escriba en la pantalla el resultado
+                    de sumar 3 + 5. </p>
+                <button class="btn btn-primary" onclick="ejercicio3()">Ejercicio 3</button>
+
+                <p>4. Escribe un programa de dos líneas que pida el nombre del usuario con un
+                    prompt y escriba un texto que diga “Hola nombreUsuario”</p>
+                <button class="btn btn-primary" onclick="ejercicio4()">Ejercicio 4</button>
+
+                <p>5. Escribe un programa de tres líneas que pida un número, pida otro número y
+                    escriba el resultado de sumar estos dos números. </p>
+                <button class="btn btn-primary" onclick="ejercicio5()">Ejercicio 5</button>
+
+                <p>6. Escribe un programa que pida dos números y escriba en la pantalla cual es el
+                    mayor. </p>
+                <button class="btn btn-primary" onclick="ejercicio6()">Ejercicio 6</button>
+
+                <p>7. Escribe un programa que pida 3 números y escriba en la pantalla el mayor de
+                    los tres. </p>
+                <button class="btn btn-primary" onclick="ejercicio7()">Ejercicio 7</button>
+
+                <p>8. Escribe un programa que pida un número y diga si es divisible por 2. </p>
+                <button class="btn btn-primary" onclick="ejercicio8()">Ejercicio 8</button>
+
+                <p>9. Escribe un programa que pida una frase y escriba cuantas veces aparece la
+                    letra a.</p>
+                <button class="btn btn-primary" onclick="ejercicio9()">Ejercicio 9</button>
+
+                <p>10. Escribe un programa que pida una frase y escriba las vocales que aparecen. </p>
+                <button class="btn btn-primary" onclick="ejercicio10()">Ejercicio 10</button>
+
+                <p>11. Escribe un programa que pida una frase y escriba cuántas de las letras que
+                    tiene son vocales.</p>
+                <button class="btn btn-primary" onclick="ejercicio11()">Ejercicio 11</button>
+
+                <p>12. Escribe un programa que pida una frase y escriba cuántas veces aparecen
+                    cada una de las vocales. </p>
+                <button class="btn btn-primary" onclick="ejercicio12()">Ejercicio 12</button>
+
+                <p>13. Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o
+                    7 (sólo hay que comprobar si lo es por uno de los cuatro). </p>
+                <button class="btn btn-primary" onclick="ejercicio13()">Ejercicio 13</button>
+
+                <p>14. Añadir al ejercicio anterior que nos diga por cual de los cuatro es divisible (hay
+                    que decir todos por los que es divisible). </p>
+                <button class="btn btn-primary" onclick="ejercicio14()">Ejercicio 14</button>
+
+                <p>15. Escribir un programa que escriba en pantalla los divisores de un número dado. </p>
+                <button class="btn btn-primary" onclick="ejercicio15()">Ejercicio 15</button>
+
+                <p>16. Escribir un programa que escriba en pantalla los divisores comunes de dos
+                    números dados. </p>
+                <button class="btn btn-primary" onclick="ejercicio16()">Ejercicio 16</button>
+
+                <p>17. Escribir un programa que nos diga si un número dado es primo (no es divisible
+                    por ninguno otro número que no sea él mismo o la unidad). </p>
+                <button class="btn btn-primary" onclick="ejercicio17()">Ejercicio 17</button>
+
+                <p>18. Pide la edad y si es mayor de 18 años indica que ya puede conducir. </p>
+                <button class="btn btn-primary" onclick="ejercicio18()">Ejercicio 18</button>
+
+                <p>19. Pide una nota (número). Muestra la calificación según la nota:
+                    ● 0-3: Muy deficiente
+                    ● 3-5: Insuficiente
+                    ● 5-6: Suficiente
+                    ● 6-7: Bien
+                    ● 7-9: Notable
+                    ● 9-10: Sobresaliente.</p>
+                <button class="btn btn-primary" onclick="ejercicio19()">Ejercicio 19</button>
+
+                <p>20. Realiza un script que pida cadenas de texto hasta que se pulse “cancelar”. Al
+                    salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión.</p>
+                <button class="btn btn-primary" onclick="ejercicio20()">Ejercicio 20</button>
+
+                <p>21. Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un
+                    número deberá indicarse con un «alert» y seguir pidiendo. Al salir con “cancelar”
+                    deberá indicarse la suma total de los números introducidos. </p>
+                <button class="btn btn-primary" onclick="ejercicio21()">Ejercicio 21</button>
+
+                <p>22. Realizar una página con un script que calcule el valor de la letra de un número
+                    de DNI (Documento Nacional de Identidad).
+                    El algoritmo para calcular la letra del dni es el siguiente :
+                    ● El número debe ser entre 0 y 99999999
+                    ● Debemos calcular el resto de la división entera entre el número y el número
+                    23.
+                    ● Según el resultado, de 0 a 22, le corresponderá una letra de las siguientes:
+                    (T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E)
+                    ● Si lo introducido no es un número deberá indicarse con un alert y volver a
+                    preguntar.
+                    ● Deberá de repetirse el proceso hasta que el usuario pulse «cancelar». </p>
+                <button class="btn btn-primary" onclick="ejercicio22()">Ejercicio 22</button>
+
+                <p>23. Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma : 1
+                    22
+                    333
+                    4444
+                    55555
+                    666666
+                    ……. </p>
+                <button class="btn btn-primary" onclick="ejercicio23()">Ejercicio 23</button>
+
+                <p>24. Haz un script que escriba una pirámide inversa de los números del 1 al
+                    número que indique el usuario de la siguiente forma : (suponiendo que indica 6).
+                    666666
+                    55555
+                    4444
+                    333
+                    22
+                    1 </p>
+                <button class="btn btn-primary" onclick="ejercicio24()">Ejercicio 24</button>
+
+                <p>25. Un script que escriba los números del 1 al 500, que indique cuáles son
+                    múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal. Por ejemplo :
+                    1
+                    2
+                    3
+                    4 (Múltiplo de 4)
+                    5
+                    ————————————————————
+                    6
+                    7
+                    8 (Múltiplo de 4)
+                    9 (</p>
+                <button class="btn btn-primary" onclick="ejercicio25()">Ejercicio 25</button>
+
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div id="resultado"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function ejercicio1() {
+            alert("Hello World");
+        }
+
+        function ejercicio2() {
+            document.getElementById("resultado").innerHTML = "<p>Hello World</p>";
+        }
+
+        function ejercicio3() {
+            alert(3 + 5);
+        }
+
+        function ejercicio4() {
+            var nombreUsuario = prompt("Por favor, introduce tu nombre:");
+            alert("Hola " + nombreUsuario);
+        }
+
+        function ejercicio5() {
+            var num1 = parseFloat(prompt("Introduce el primer número:"));
+            var num2 = parseFloat(prompt("Introduce el segundo número:"));
+            var resultado = num1 + num2;
+            alert("El resultado de sumar los dos números es: " + resultado);
+        }
+
+        function ejercicio6() {
+            var num1 = parseFloat(prompt("Introduce el primer número:"));
+            var num2 = parseFloat(prompt("Introduce el segundo número:"));
+
+            var mayor;
+
+            if (num1 > num2) {
+                mayor = num1;
+            } else if (num2 > num1) {
+                mayor = num2;
+            } else {
+                mayor = "Los números son iguales";
+            }
+
+            alert("El mayor de los dos números es: " + mayor);
+        }
+
+        function ejercicio7() {
+            var num1 = parseFloat(prompt("Introduce el primer número:"));
+            var num2 = parseFloat(prompt("Introduce el segundo número:"));
+            var num3 = parseFloat(prompt("Introduce el tercer número:"));
+
+            var mayor = num1;
+
+            if (num2 > mayor) {
+                mayor = num2;
+            }
+
+            if (num3 > mayor) {
+                mayor = num3;
+            }
+
+            alert("El mayor de los tres números es: " + mayor);
+        }
+
+        function ejercicio8() {
+            var numero = parseInt(prompt("Introduce un número:"));
+            if (numero % 2 === 0) {
+                alert("El número es divisible por 2.");
+            } else {
+                alert("El número no es divisible por 2.");
+            }
+        }
+
+        function ejercicio9() {
+            var frase = prompt("Introduce una frase:");
+            var contadorA = 0;
+            for (var i = 0; i < frase.length; i++) {
+                if (frase[i].toLowerCase() === 'a') {
+                    contadorA++;
+                }
+            }
+            alert("La letra 'a' aparece " + contadorA + " veces en la frase.");
+        }
+
+        function ejercicio10() {
+            var frase = prompt("Introduce una frase:");
+            var vocales = "";
+            for (var i = 0; i < frase.length; i++) {
+                var letra = frase[i].toLowerCase();
+                if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
+                    vocales += letra + " ";
+                }
+            }
+            alert("Las vocales que aparecen en la frase son: " + vocales);
+        }
+
+        function ejercicio11() {
+            var frase = prompt("Introduce una frase:");
+            var contadorVocales = 0;
+            for (var i = 0; i < frase.length; i++) {
+                var letra = frase[i].toLowerCase();
+                if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
+                    contadorVocales++;
+                }
+            }
+            alert("La frase tiene " + contadorVocales + " vocales.");
+        }
+
+        function ejercicio12() {
+            var frase = prompt("Introduce una frase:");
+            var contadorA = 0;
+            var contadorE = 0;
+            var contadorI = 0;
+            var contadorO = 0;
+            var contadorU = 0;
+
+            for (var i = 0; i < frase.length; i++) {
+                var letra = frase[i].toLowerCase();
+                switch (letra) {
+                    case 'a':
+                        contadorA++;
+                        break;
+                    case 'e':
+                        contadorE++;
+                        break;
+                    case 'i':
+                        contadorI++;
+                        break;
+                    case 'o':
+                        contadorO++;
+                        break;
+                    case 'u':
+                        contadorU++;
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            var resultado = "Vocales encontradas:\n";
+            resultado += "A: " + contadorA + "\n";
+            resultado += "E: " + contadorE + "\n";
+            resultado += "I: " + contadorI + "\n";
+            resultado += "O: " + contadorO + "\n";
+            resultado += "U: " + contadorU;
+
+            alert(resultado);
+        }
+
+        function ejercicio13() {
+            var numero = parseInt(prompt("Introduce un número:"));
+
+            var divisiblePor2 = numero % 2 === 0;
+            var divisiblePor3 = numero % 3 === 0;
+            var divisiblePor5 = numero % 5 === 0;
+            var divisiblePor7 = numero % 7 === 0;
+
+            var mensaje = "El número " + numero + " ";
+            if (divisiblePor2 || divisiblePor3 || divisiblePor5 || divisiblePor7) {
+                mensaje += "es divisible por ";
+                if (divisiblePor2) mensaje += "2, ";
+                if (divisiblePor3) mensaje += "3, ";
+                if (divisiblePor5) mensaje += "5, ";
+                if (divisiblePor7) mensaje += "7";
+            } else {
+                mensaje += "no es divisible por 2, 3, 5 ni 7";
+            }
+
+            alert(mensaje);
+        }
+
+        function ejercicio14() {
+            var numero = parseInt(prompt("Introduce un número:"));
+
+            var divisiblePor2 = numero % 2 === 0;
+            var divisiblePor3 = numero % 3 === 0;
+            var divisiblePor5 = numero % 5 === 0;
+            var divisiblePor7 = numero % 7 === 0;
+
+            var mensaje = "El número " + numero + " ";
+            var divisores = [];
+            if (divisiblePor2) divisores.push(2);
+            if (divisiblePor3) divisores.push(3);
+            if (divisiblePor5) divisores.push(5);
+            if (divisiblePor7) divisores.push(7);
+
+            if (divisores.length > 0) {
+                mensaje += "es divisible por " + divisores.join(", ");
+            } else {
+                mensaje += "no es divisible por 2, 3, 5 ni 7";
+            }
+
+            alert(mensaje);
+        }
+
+        function ejercicio15() {
+            var numero = parseInt(prompt("Introduce un número:"));
+            var divisores = [];
+
+            for (var i = 1; i <= numero; i++) {
+                if (numero % i === 0) {
+                    divisores.push(i);
+                }
+            }
+
+            var mensaje = "Los divisores de " + numero + " son: " + divisores.join(", ");
+            alert(mensaje);
+        }
+
+        function ejercicio16() {
+            var numero1 = parseInt(prompt("Introduce el primer número:"));
+            var numero2 = parseInt(prompt("Introduce el segundo número:"));
+            var divisoresComunes = [];
+
+            var menorNumero = Math.min(numero1, numero2);
+
+            for (var i = 1; i <= menorNumero; i++) {
+                if (numero1 % i === 0 && numero2 % i === 0) {
+                    divisoresComunes.push(i);
+                }
+            }
+
+            var mensaje = "Los divisores comunes de " + numero1 + " y " + numero2 + " son: " + divisoresComunes.join(", ");
+            alert(mensaje);
+        }
+
+        function ejercicio17() {
+            var numero = parseInt(prompt("Introduce un número:"));
+            var esPrimo = true;
+
+            if (numero <= 1) {
+                esPrimo = false;
+            } else {
+                for (var i = 2; i <= Math.sqrt(numero); i++) {
+                    if (numero % i === 0) {
+                        esPrimo = false;
+                        break;
+                    }
+                }
+            }
+
+            var mensaje = "El número " + numero + " ";
+            if (esPrimo) {
+                mensaje += "es primo";
+            } else {
+                mensaje += "no es primo";
+            }
+            alert(mensaje);
+        }
+
+        function ejercicio18() {
+            var edad = parseInt(prompt("Por favor, introduce tu edad:"));
+
+            if (edad >= 18) {
+                alert("¡Felicidades! Ya puedes conducir.");
+            } else {
+                alert("Lo siento, aún no puedes conducir.");
+            }
+        }
+
+        function ejercicio19() {
+            var nota = parseFloat(prompt("Introduce tu nota:"));
+
+            if (nota >= 0 && nota <= 3) {
+                alert("Tu calificación es Muy deficiente.");
+            } else if (nota > 3 && nota <= 5) {
+                alert("Tu calificación es Insuficiente.");
+            } else if (nota > 5 && nota <= 6) {
+                alert("Tu calificación es Suficiente.");
+            } else if (nota > 6 && nota <= 7) {
+                alert("Tu calificación es Bien.");
+            } else if (nota > 7 && nota <= 9) {
+                alert("Tu calificación es Notable.");
+            } else if (nota > 9 && nota <= 10) {
+                alert("Tu calificación es Sobresaliente.");
+            } else {
+                alert("La nota ingresada es inválida. Por favor, introduce una nota válida entre 0 y 10.");
+            }
+        }
+
+        function ejercicio20() {
+            var cadenas = [];
+            var cadena;
+
+            while (true) {
+                cadena = prompt("Introduce una cadena de texto (o pulsa cancelar para salir):");
+                if (cadena === null) {
+                    break;
+                }
+                cadenas.push(cadena);
+            }
+
+            var resultado = cadenas.join("-");
+            alert("Cadenas concatenadas: " + resultado);
+        }
+
+        function ejercicio21() {
+            var suma = 0;
+
+            while (true) {
+                var input = prompt("Introduce un número (o pulsa cancelar para salir):");
+                if (input === null) {
+                    break;
+                }
+                var numero = parseFloat(input);
+                if (!isNaN(numero)) {
+                    suma += numero;
+                } else {
+                    alert("¡Error! Debes introducir un número válido.");
+                }
+            }
+
+            alert("La suma total de los números introducidos es: " + suma);
+        }
+
+        function ejercicio22() {
+            while (true) {
+                var dni = prompt("Introduce tu número de DNI (o pulsa cancelar para salir):");
+
+                if (dni === null) {
+                    break;
+                }
+
+                if (!isNaN(dni)) {
+                    var numeroDNI = parseInt(dni);
+                    if (numeroDNI >= 0 && numeroDNI <= 99999999) {
+                        var letrasDNI = "TRWAGMYFPDXBNJZSQVHLCKE";
+                        var indice = numeroDNI % 23;
+                        var letra = letrasDNI.charAt(indice);
+                        alert("La letra de tu DNI es: " + letra);
+                    } else {
+                        alert("El número de DNI debe estar entre 0 y 99999999.");
+                    }
+                } else {
+                    alert("¡Error! Debes introducir un número válido para el DNI.");
+                }
+            }
+        }
+
+        function ejercicio23() {
+            var piramide = "";
+            for (var i = 1; i <= 30; i++) {
+                piramide += String(i).repeat(i) + "\n";
+            }
+            alert(piramide);
+        }
+
+        function ejercicio24() {
+            var numeroFilas = parseInt(prompt("Introduce un número para la pirámide inversa:"));
+            var piramideInversa = "";
+
+            for (var i = numeroFilas; i >= 1; i--) {
+                piramideInversa += String(i).repeat(i) + "\n";
+            }
+
+            alert(piramideInversa);
+        }
+
+        function ejercicio25() {
+            var mensaje = "";
+            for (var i = 1; i <= 500; i++) {
+                mensaje += i + "\n";
+                if (i % 4 === 0) {
+                    mensaje += "(Múltiplo de 4)\n";
+                }
+                if (i % 9 === 0) {
+                    mensaje += "(Múltiplo de 9)\n";
+                }
+                if (i % 5 === 0 && i < 500) {
+                    mensaje += "————————————————————\n";
+                }
+            }
+            alert(mensaje);
+        }
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
